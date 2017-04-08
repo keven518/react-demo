@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>学习React</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../../react/react.js"></script>
+  <script src="../../react/JSXTransformer.js"></script>
+  <script type="text/jsx">
+    var MessageBox = React.createClass({
+        render:function(){
+          var submessages = [];
+          for(var i=0; i<10; i++){
+            submessages.push(
+              <Submessage key={'subMsg'+i}/>
+            )
+          }
+          return ( 
+            <div>
+              <h1>你好柯文！！</h1> 
+              {submessages}
+            </div>
+          )
+        }
+    });
+
+    var Submessage = React.createClass({
+        render:function(){
+          return (
+            <div>
+              <h3>写代码很有意思</h3>
+              <Footer />
+            </div>
+          )
+        }
+    })
+
+    var Footer = React.createClass({
+        render:function(){
+          return (
+            <small>因为我们在用代码创造世界</small>
+          )
+        }
+    })
+
+    React.render( <MessageBox/>,
+          document.getElementById('app'),
+          function() {
+            console.log('渲染完成了！！');
+          } 
+    )
+  </script>
+</body>
+</html>

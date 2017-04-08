@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>学习React</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../../react/react.js"></script>
+  <script src="../../react/JSXTransformer.js"></script>
+  <script type="text/jsx">
+    var MessageBox = React.createClass({
+        render:function(){
+          return ( <h1>你好柯文！！</h1> )
+        }
+    });
+
+    React.render( <MessageBox/>,
+          document.getElementById('app'),
+          function() {
+            console.log('渲染完成了！！');
+          } 
+    )
+  </script>
+</body>
+</html>
