@@ -1,3 +1,3 @@
 >  组件的嵌套
 
-嵌套的组件要包一层tag 用div即可
+>  * render 里的 return 只能有一个tag
